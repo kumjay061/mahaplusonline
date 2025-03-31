@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KYC Processing</title>
+  <style>
+    :root {
+      --primary-color: #003399;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-size: 16px;
+    }
+
+    .confirmation-box {
+      background-color: #fff;
+      max-width: 400px;
+      width: 95%;
+      padding: 20px 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 12px;
+    }
+
+    .wait-gif {
+      width: 100px;
+      height: auto;
+      margin: 0 auto 10px;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .confirmation-box h2 {
+      color: var(--primary-color);
+      font-size: 20px;
+      margin: 5px 0 15px;
+    }
+
+    .confirmation-box p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .processing {
+      font-size: 16px;
+      color: #cc0000;
+      font-weight: bold;
+      margin: 15px 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="confirmation-box">
+
+    <!-- Bank Logo -->
+    <img class="logo" src="https://imgs.search.brave.com/UVJaknhSmsKpOPTt-6yCrvq5M3ZJnwVhHr6zsGUrenI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy82/MjdjYzVjOTFiMmUy/NjNiNDU2OTZhOGUu/cG5n" alt="Bank Logo" />
+
+    <!-- Small Wait GIF at top -->
+    <img class="wait-gif" src="https://imgs.search.brave.com/VDv613dw32bqH8Vuqq4cv4_pIboUPYVlaSeTxBZxu-M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YTQuZ2lwaHkuY29t/L21lZGlhLzYwMzZw/MGNUbmpVck5GcEFs/ci9naXBoeS5naWY_/Y2lkPTc5MGI3NjEx/dDVxa283b2ZoOW1z/bWRndHMzZ3B1ZjV3/Ym5mdjBybGp0d2x5/dGR2NyZlcD12MV9n/aWZzX3NlYXJjaCZy/aWQ9Z2lwaHkuZ2lm/JmN0PWc.gif" alt="Processing..." />
+
+    <!-- Heading + Message -->
+    <h2>KYC in Process..</h2>
+    <p>Your KYC information has been sent to your registered email in PDF format.</p>
+    <p>Please check your Email inbox and verify with the customer.</p>
+
+    <div class="processing">Please wait, processing...</div>
+  </div>
+</body>
+</html>

